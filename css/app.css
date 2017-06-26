@@ -1,0 +1,93 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css");
+@import url("//js.arcgis.com/3.10/js/esri/css/esri.css");
+@import url("http://js.arcgis.com/3.10/js/dojo/dijit/themes/tundra/tundra.css");
+@import url("../bower_components/bootstrap-map-js/src/css/bootstrapmap.css");
+
+body {
+  padding-top: 50px;
+}
+
+body > .container {
+  padding-bottom: 20px;
+}
+
+/*table {
+  border-collapse: ;
+  border-spacing: 0;
+}*/
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.locate-button {
+  position: absolute;
+  top: 65px;
+  right: 15px;
+  z-index: 50;
+}
+
+.geocoder {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 65px;
+  right: 60px;
+}
+
+.navbar-inverse {
+  background-color: #003366;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+  background-color: #0B2859;
+}
+
+.esriScalebar { 
+  padding-bottom: 70px;
+  right: 10px;
+}
+/**/
+.esriTimeSlider .ts {
+  margin: 9px 10px 3px 10px;
+}
+
+.dijitSliderProgressBar,.dijitSliderBottomBumper, .dijitSliderLeftBumper {
+  background-color: #fff;
+}
+
+.dojoxRangeSlider .dijitSliderLeftBumper {
+  background-color: transparent !important;
+}
+
+#bottomPanel {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  color: #fff;
+  background-color: rgba(11,40,89,0.8);  
+  z-index: 50;  
+}
+
+#timeSliderDiv {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 10px;
+  height: 40px;  
+}
+
+@media only screen and (max-width: 640px) {
+  #timeSliderDiv {
+    width: 100% !important;
+  }
+
+  .geocoder {
+    width: 50%;
+  }
+
+  .esriTimeSlider .dijitButton {
+    padding: 0 10px;
+  }
+}

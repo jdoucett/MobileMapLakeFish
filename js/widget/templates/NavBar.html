@@ -1,0 +1,95 @@
+<div>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">${strings.appTitle}</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active dropdown year-list">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="dateTextLabel"></a>
+            <!-- TODO: build this dynamically from config -->
+            <ul class="dropdown-menu">
+              <li><a href="#">1993 - 2002</a></li>
+              <li><a href="#">2003 - 2012</a></li>
+              </ul>
+          </li>
+          <li class="active dropdown fish-list">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="fishTextLabel"></a>
+            <!-- TODO: build this dynamically from config -->
+            <ul class="dropdown-menu">
+              <li><a href="#">Rainbow Trout</a></li>
+              <li><a href="#">Lake Trout</a></li>
+              <li><a href="#">Chinook Salmon</a></li>
+              <li><a href="#">Brown Trout</a></li>
+              <li><a href="#">Coho Salmon</a></li>    
+            </ul>
+          </li>
+          <li class="active dropdown summary-list">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="summaryTextLabel"></a>
+            <!-- TODO: build this dynamically from config -->
+            <ul class="dropdown-menu">
+              <li><a href="#">Catch per Trip</a></li>
+              <li><a href="#">Catch per Angler Hour</a></li>
+              <li><a href="#">Catch Total</a></li>
+            </ul>
+          </li>
+          <li class="active dropdown basemap-list">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">${strings.navBasemaps} <b class="caret"></b></a>
+            <!-- TODO: build this dynamically from config -->
+            <ul class="dropdown-menu">
+              <li><a href="#">Streets</a></li>
+              <li><a href="#">Imagery</a></li>
+              <li><a href="#">National Geographic</a></li>
+              <li><a href="#">Topographic</a></li>
+              <li><a href="#">Gray</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Open Street Map</a></li>
+              <li class="divider"></li>
+              <li><a href="#">MapBox Space</a></li>
+              <li><a href="#">Water Color</a></li>
+              <li><a href="#">Pinterest</a></li>
+            </ul>
+          </li>
+          <li><a href="#legend">${strings.navLegend}</a></li>
+          <li><a href="#about">${strings.navAbout}</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  <!-- legend modal -->
+  <div class="modal fade legend-modal" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">${strings.modalLegendTitle}</h4>
+        </div>
+        <div class="modal-body">
+<div data-dojo-type="dijit/layout/ContentPane" id="legendPane"
+           data-dojo-props="title:'Legend', selected:true">
+        <div id="legendDiv" ></div>
+      </div><!-- <p><a href="${config.legend.moreInfoUrl}">${strings.modalLegendMoreInfo}</a> --></div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>  <!-- about modal -->
+  <div class="modal fade about-modal" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">${strings.modalAboutTitle}</h4>
+        </div>
+        <div class="modal-body">
+          <p>${strings.modalAboutContent}</p>
+          <p><a href="${config.about.moreInfoUrl}">${strings.modalAboutMoreInfo}</a>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+</div>
